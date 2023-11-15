@@ -1,0 +1,32 @@
+.TH MemoryManager "Nov 14"
+
+.SH MemoryManager
+
+
+.SH Synopsis
+In this file I made a memory manager that lets a user allocated and deallocate information dynamically for their application
+Memorymanager is an object that stores an array of bytes and locally keeps track of holes and blocks. A user can use this object
+to dynamically allocate and deallocate information from the array of data stored in the object. 
+
+.SH Description
+This program stores an array of bytes and stores a map for holes and blocks of allocated data. The user can interact with the api 
+to change the size of a word to their own desired size. If a user wishes to keep track of information is a clean and user friendly
+way they can use this object to store any sort of information they desire. One thing to keep note of is that the memory block is
+
+
+.SH Filename
+[MemoryManager.cpp]
+
+.SH Important functions
+- Initialize - will let the user set the size of the memory address block
+- GetMemoryStart - will let the user attain the beginning address for the memory block stored in the memorymanager object
+- Free() - will free the block of information located at the address that was passed in
+- Allocate() - will allocate information to the memory array and will use the allocator that was assigned upon construction or after setting the allocator. If the allocation fails then the returned value is nullptr.
+- SetAllocator() - this allows the user to either write or use one of the native allocators for the memory array. An allocator will find the desired block of free space when the user tries to allocate something. If there isnt an available spot in the array then the array returns with -1 and the allocation fails.
+
+.SH Author
+Brandon Grill
+
+.SH Screencast
+youtube link: 
+
